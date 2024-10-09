@@ -22,34 +22,38 @@
 
         h1 {
             font-size: 4rem; /* Tamaño de la fuente aumentado */
-            margin-bottom: 40px; /* Aumentar margen inferior */
+            margin-bottom: 10px; /* Aumentar margen inferior */
             text-align: center;
             text-shadow: 2px 2px 4px white;
         }
 
         .cuadro {
             background-color: rgba(128, 128, 128, 0.8); /* Fondo gris semitransparente */
-            border-radius: 45px;
-            padding: 60px; /* Aumentar padding */
+            border-radius: 40px;
+            padding: 40px; /* Aumentar padding */
             text-align: center;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Aumentar sombra */
             width: 100%; /* Ancho del cuadro */
             max-width: 600px; /* Máxima anchura */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         .button {
             padding: 20px; /* Espacio interno */
-            margin: 20px 0; /* Margen vertical entre botones */
+            margin: 10px 0; /* Margen vertical entre botones */
             border: none;
             border-radius: 10px;
             cursor: pointer;
             font-size: 18px; /* Aumentar tamaño de fuente */
             transition: background-color 0.3s;
             color: white;
-            width: 100%; /* Hacer que los botones ocupen todo el ancho del cuadro */
+            width: 80%; /* Hacer que los botones ocupen el 80% del cuadro */
             display: flex;
             align-items: center;
             justify-content: center; /* Centrar contenido */
+            max-width: 300px; /* Máxima anchura de los botones */
         }
 
         .button1 {
@@ -67,8 +71,23 @@
         }
 
         .logo {
-            width: 30px; /* Ancho del logo */
-            margin-right: 10px; /* Espacio entre logo y texto */
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            margin-right: 10px; /* Ajusta el espacio entre la imagen y el texto */
+        }
+
+        .logo h1 {
+            margin: 0; /* Elimina el margen predeterminado del h1 */
+            font-size: 2rem; /* Ajusta el tamaño del h1 dentro de .logo */
+        }
+
+        /* Estilo para las imágenes dentro de los botones */
+        .button img {
+            height: 30px; /* Ajusta la altura de las imágenes dentro de los botones */
+            margin-right: 8px; /* Espacio entre la imagen y el texto del botón */
         }
 
         @media (max-width: 768px) {
@@ -79,7 +98,7 @@
 
         @media (max-width: 480px) {
             .cuadro {
-                padding: 40px; /* Reducir padding en pantallas muy pequeñas */
+                padding: 20px; /* Reducir padding en pantallas muy pequeñas */
             }
             .button {
                 padding: 15px 30px; /* Reducir padding de botones en pantallas muy pequeñas */
@@ -89,21 +108,26 @@
     </style>
 </head>
 <body>
-<h1>Ey Muchachos los espero todos por aca!</h1>
-<p><strong><h3>Bienvenidos a mi Gestion de Redes Sociales!</h3></strong></p>
+    <div class="logo">
+        <img src="c0e51ee4-863f-4f86-8ca6-e4ed98e8264b.jpeg" height="50px" alt="Icono">
+        <h1>Ey Muchachos, ¡Cómo Están!</h1>
+    </div>
+
+    <p><strong><h3>Bienvenidos a mi Gestion de Redes Sociales!</h3></strong></p>
     <div class="cuadro">
         <p><strong><h4>Sígueme en Instagram!</h4></strong></p>
         <button class="button button1" onclick="window.open('https://www.instagram.com/kykepicks29?igsh=MXZ0c3hnaDF4bWF6OA%3D%3D', '_blank')">
-            <img src="ig.jpeg" alt="Instagram" class="logo"> Instagram
+            <img src="ig.jpeg" alt="Instagram"> Instagram
         </button>
         <br>
         <p><strong><h4>Ingresa a mi canal de Telegram!</h4></strong></p>
         <button class="button button2" onclick="window.open('https://t.me/+PiJ4ZRAHTT9kNGMx', '_blank')">
-            <img src="telegram.png" alt="Telegram" class="logo"> Telegram Gratuito
+            <img src="telegram.png" alt="Telegram"> Telegram Gratuito
         </button>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
+
 
